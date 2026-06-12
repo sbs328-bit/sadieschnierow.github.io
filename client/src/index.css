@@ -1,0 +1,158 @@
+body {
+  background: #f7f8f5;
+  color: #0f0f0f;
+  font-family: 'Crimson Pro', 'Georgia', serif;
+  font-size: 16px;
+  line-height: 1.4;
+  border: black solid 1px;
+  padding: 0px 20px;
+  margin: 0;
+}
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  display: block;
+  border: black solid 1px;
+}
+
+h1 {
+  border: black solid 1px;
+  font-family: 'Crimson Pro', serif;
+  font-size: 48px;
+  font-weight: 300;
+}
+
+h3 {
+  border: black solid 1px;
+  font-family: 'Crimson Pro', serif;
+  font-size: 24px;
+  font-weight: 200;
+  font-style: italic;
+}
+
+p {
+  border: black solid 1px;
+  font-family: 'Crimson Pro', serif;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.top-bar {
+  border: black solid 1px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.avatar {
+  font-size: 40px;
+}
+
+.contact-btn {
+  background: #1a1a1a;
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  padding: 12px 22px;
+  font-size: 14px;
+  cursor: pointer;
+  font-family: sans-serif;
+}
+
+.rounded-border {
+  border: black solid 1px;
+  width: fit-content;
+  border-radius: 999px;
+  padding: 6px 16px;
+}
+
+.project-grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  margin-top: 24px;
+}
+
+.project-card {
+  border: none;
+  background: none;
+  padding: 0;
+  width: 100%;
+  cursor: pointer;
+  perspective: 1000px;
+}
+
+.project-card-inner {
+  position: relative;
+  width: 100%;
+  padding-top: 70%;
+  transform-style: preserve-3d;
+  border-radius: 24px;
+}
+
+.project-card.flipped .project-card-inner {
+  transform: rotateY(180deg);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .project-card:hover .project-card-inner {
+    transform: rotateY(180deg);
+  }
+}
+
+.project-card-front,
+.project-card-back {
+  position: absolute;
+  inset: 0;
+  border-radius: 24px;
+  backface-visibility: hidden;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.project-card-front {
+  background-size: cover;
+  background-position: center;
+}
+
+.project-card-front::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 48%, rgba(0, 0, 0, 0.35) 100%);
+}
+
+.project-card-back {
+  background: #def0ff;
+  transform: rotateY(180deg);
+  padding: 24px;
+  align-items: stretch;
+  justify-content: center;
+}
+
+.project-card-content {
+  width: 100%;
+  color: #0f2a42;
+  text-align: left;
+  font-family: inherit;
+}
+
+.project-card-content h4 {
+  margin: 0 0 0.75rem;
+  font-size: 1.2rem;
+}
+
+.project-card-content p {
+  margin: 0 0 1.25rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.project-card-btn:hover {
+  transform: translateY(-1px);
+  background: #e6f2ff;
+}
