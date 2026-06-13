@@ -1,9 +1,8 @@
 body {
   background: #f7f8f5;
-  color: #BD1E1E;
+  color: #172653;
   font-family: 'Crimson Pro', 'Georgia', serif;
   font-size: 16px;
-  border: black solid 1px;
   padding: 0px 20px;
   margin: 0;
 }
@@ -13,45 +12,40 @@ main {
   max-width: 900px;
   margin: 0 auto;
   display: block;
-  border: #000000 solid 1px;
 }
 
 h1 {
-  border: black solid 1px;
-  font-family: 'Crimson Pro', serif;
   font-size: 48px;
   font-weight: 300;
-  color: #172653;
-  margin: 5px 0px;
+  margin: 0;
 }
 
 h3 {
-  border: black solid 1px;
-  font-family: 'Crimson Pro', serif;
   font-size: 24px;
   font-weight: 200;
-  font-style: italic;
-  margin: 5px 0px;
+  margin: 0;
+}
+
+.hero {
+  padding: 32px 0 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 h5 {
-  font-family: 'Crimson Pro', serif;
   font-size: 16px;
   font-weight: 200;
-  font-style: italic;
   margin: 5px 0px;
 }
 
 p {
-  border: black solid 1px;
-  font-family: 'Crimson Pro', serif;
   font-size: 16px;
   font-weight: 300;
   margin: 5px 0px;
 }
 
 .top-bar {
-  border: black solid 1px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -59,48 +53,44 @@ p {
 }
 
 .avatar {
-  font-size: 40px;
-}
-
-.contact-btn {
-  background: #1a1a1a;
-  color: #fff;
-  border: none;
-  border-radius: 999px;
-  padding: 12px 22px;
-  font-size: 14px;
-  cursor: pointer;
-  font-family: sans-serif;
+  font-size: 50px;
 }
 
 .rounded-border {
-  border: black solid 1px;
+  border: #172653 solid 1.5px;
   width: fit-content;
   border-radius: 999px;
   padding: 6px 16px;
 }
 
 .gallery {
+  margin: 20px 0px;
   display: flex;
   align-items: flex-start;
   flex-wrap: wrap;
   gap: 1em;
-  color: #ffffff;
+  color: #f7f8f5;
+  width: 100%;
+  justify-content: space-between;
 }
 
 .card {
   background-color: #7A93AC;
   border-radius: 12px;
   position: relative;
-  width: 300px;
-  height: 300px;
+  flex: 1 1 calc((100% - 2rem) / 3);
+  max-width: calc((100% - 2rem) / 3);
+  aspect-ratio: 4 / 3;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .card-content {
-  padding: 10px;
+  padding: 1rem;
 }
 
+.card > img,
 .card-image {
   object-fit: cover;
   width: 100%;
@@ -111,5 +101,13 @@ p {
   .project-card:hover .project-card-inner {
     transform: rotateY(180deg);
   }
+}
+
+.site-footer {
+  text-align: center;
+  padding: 24px 0;
+  color: #172653;
+  font-size: 14px;
+  margin-top: 32px;
 }
 

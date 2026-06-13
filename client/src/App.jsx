@@ -2,22 +2,27 @@ import './index.css';
 import Heading from './components/Heading';
 import Card from './components/Card';
 import Button from './components/Button';
+import Footer from './components/Footer';
 
 const projects = [
   {
-    title: 'Project One',
-    description: 'A short line about what this is.',
-    image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80',
+    title: 'Jaden',
+    date: { month: 'June', year: 2025 },
+    description: 'Brand identity and website for Jaden, a personal safety alarm designed for women runners.',
+    image: '/images/jaden.png',
+    link: 'https://cornell-info1300-2025fa.github.io/sbs328-project/index.html',
   },
   {
-    title: 'Project Two',
-    description: 'Another thing you made or worked on.',
-    image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80',
+    title: 'Seekh Embarrassment',
+    date: { month: 'January', year: 2026 },
+    description: 'Designed a clothing line for Seekh Embarrassment, a celebrity streetwear brand.',
+    image: '/images/seekh.png',
   },
   {
-    title: 'Project Three',
-    description: 'Keep these descriptions tight.',
-    image: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=900&q=80',
+    title: 'AEPhi Pink Week',
+    date: { month: 'October', year: 2025 },
+    description: 'Organized a week of philanthropy events in support of Sharsheret. Designed graphics for social media and merch. Raised over $2000 for breast and ovarian cancer patients.',
+    image: '/images/pink-week.png',
   },
 ];
 
@@ -29,7 +34,7 @@ function App() {
       <main>
         <Heading />
         <section>
-          <h3 className="rounded-border">Featured Work!</h3>
+          <h3 className="rounded-border" style={{ fontStyle: "italic" }}>Featured Work!</h3>
           <div className="gallery">
             {projects.map((project, index) => (
               <Card
@@ -37,12 +42,15 @@ function App() {
                 title={project.title}
                 description={project.description}
                 imgUri={project.image}
+                link={project.link}
               />
             ))}
           </div>
         </section>
       </main>
-      
+
+      <Footer />
+
     </div>
   );
 }
