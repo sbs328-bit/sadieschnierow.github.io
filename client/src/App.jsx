@@ -1,6 +1,7 @@
 import './index.css';
 import Heading from './components/Heading';
-import Project from './components/Project';
+import Card from './components/Card';
+import Button from './components/Button';
 
 const projects = [
   {
@@ -29,13 +30,13 @@ function App() {
         <Heading />
         <section>
           <h3 className="rounded-border">Featured Work!</h3>
-          <div className="project-grid">
-            {projects.map((project) => (
-              <Project
-                key={project.title}
+          <div className="gallery">
+            {projects.map((project, index) => (
+              <Card
+                key={index}
                 title={project.title}
                 description={project.description}
-                image={project.image}
+                imgUri={project.image}
               />
             ))}
           </div>
