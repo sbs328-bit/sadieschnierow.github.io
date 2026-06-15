@@ -13,7 +13,7 @@ function App() {
       <main>
         <Heading />
         <section>
-          <h3 className="rounded-border" style={{ fontStyle: "italic" }}>Featured Work!</h3>
+          <h3 className="rounded-border" style={{ fontStyle: "italic" }}>Recent Projects!</h3>
           <div className="gallery">
             {projects.map((project, index) => (
               <Card
