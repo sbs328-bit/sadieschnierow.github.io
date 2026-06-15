@@ -66,7 +66,7 @@ p {
 .gallery {
   margin: 20px 0px;
   display: flex;
-  align-items: flex-start;
+  align-items: stretch;
   flex-wrap: wrap;
   gap: 1em;
   color: #f7f8f5;
@@ -78,8 +78,8 @@ p {
   background-color: #7A93AC;
   border-radius: 12px;
   position: relative;
-  flex: 1 1 calc((100% - 2rem) / 3);
-  max-width: calc((100% - 2rem) / 3);
+  flex: 1 1 250px;
+  min-width: 250px;
   aspect-ratio: 4 / 3;
   overflow: hidden;
   display: flex;

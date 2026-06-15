@@ -24,6 +24,13 @@ const projects = [
     description: 'Organized a week of philanthropy events in support of Sharsheret. Designed graphics for social media and merch. Raised over $2000 for breast and ovarian cancer patients.',
     image: '/images/pink-week.png',
   },
+  {
+    title: 'Kids Fight Climate Change',
+    date: { month: 'May', year: 2023 },
+    description: 'Organized a week of philanthropy events in support of Sharsheret. Designed graphics for social media and merch. Raised over $2000 for breast and ovarian cancer patients.',
+    image: '/images/kfcc.png',
+    link: 'https://www.kidsfightclimatechange.org/',
+  },
 ];
 
 function App() {
